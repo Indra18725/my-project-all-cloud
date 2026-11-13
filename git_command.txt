@@ -276,6 +276,19 @@ git remote add origin git@github.com:<user>/my-project-all-cloud.git
 git remote -v
 
 
+
+# Multiple accounts Git for windows
+git config --global --replace-all credential.helper manager-core
+
+
+# Multiple accounts Git for Linux
+git config --global --replace-all credential.helper store
+
+
+# Multiple accounts Git for Mac
+git config --global --replace-all credential.helper osxkeychain
+
+
 # set url for git repo 
 git remote set-url origin https://YourSecondUsername@github.com/YourSecondUsername/other-repo.git
 
