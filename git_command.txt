@@ -283,6 +283,18 @@ git config --local credential.username "Indra18725"
 
 
 
+# set credential for local repo
+git config --local credential.helper ""       ## ignore the global manager  
+git config --local --add credential.helper "store --file=.git/my-credentials"    #the line sets the local file
+git config --local --get-all credential.helper     # verify it 
+
+
+#  push to save the credentials  
+git push
+
+
+
+
 # for current folder project  verify the user name and email for git repo
 git config user.name     # no flag = resolved value
 git config user.email
@@ -329,6 +341,9 @@ git config --list | grep user
 
 # global vs local next to each line.
 git config --list --show-origin --show-scope | grep user
+
+
+.
 
 
 
