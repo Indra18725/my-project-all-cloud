@@ -320,6 +320,7 @@ git config --local --list | grep user
 
 # verify global
 git config --global --list --show-origin
+.
 
 
 # verify global & local
