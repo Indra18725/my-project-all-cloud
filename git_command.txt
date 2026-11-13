@@ -276,21 +276,15 @@ git remote add origin git@github.com:<user>/my-project-all-cloud.git
 git remote -v
 
 
-
-# HTTPS, per-repo credential path (quickest)    this must be done other wise you will get 403  use API token password
-git config --local credential.useHttpPath true
-git config --local credential.username "Indra18725"
+# set url for git repo 
+git remote set-url origin https://YourSecondUsername@github.com/YourSecondUsername/other-repo.git
 
 
-
-# set credential for local repo
-git config --local credential.helper ""       ## ignore the global manager  
-git config --local --add credential.helper "store --file=.git/my-credentials"    #the line sets the local file
-git config --local --get-all credential.helper     # verify it 
-
-
-#  push to save the credentials  
 git push
+
+enter access token
+
+
 
 
 
@@ -320,15 +314,7 @@ git push -u origin main
 
 
 
-# Per-repo commit identity 
 
-git config --local user.name  "Username"
-git config --local user.email "your-email"
-
-
-
-# verify local
-git config --local --list | grep user
 
 # verify global
 git config --global --list --show-origin
